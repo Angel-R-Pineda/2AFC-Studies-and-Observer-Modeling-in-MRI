@@ -27,7 +27,7 @@ To run the 2-AFC obsercer study, simply run "run2AFCExperiment.m" in a folder wi
 
 Once you run the script and enter the necessary information as explained above, a figure window will appear with 3 images, one containing the signal, one not containing the signal, and one of the isolated signal itself. Your job is to click on the image (left or right) that you believe the signal is in. After each click, whether you got it correct or incorrect will appear in the command window. After you have completed all nImages trials, your percentage selected correctly will appear as the output.  The output will be saved as separate files called ‘userName_trialType_trialNumber’ for future reference and analysis.
 
-# Generating the Images for the 2AFC Study
+## Generating the Images for the 2AFC Study
 
 The code in the Generating-2AFC-MRI-Images generates the 2-AFC images.
 
