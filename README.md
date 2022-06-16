@@ -4,6 +4,8 @@ This repository contains code used in a submission to the SPIE Journal of Medica
 
 AG O'Neill, EL Valdez, SG Lingala, and AR Pineda, "Modeling human observer detection in undersampled magnetic resonance imaging (MRI) with total variation and wavelet sparsity regularization", Journal of Medical Imaging (under review)
 
+## 2AFC studies and Observer Modeling
+
 The code in the 2-AFC-and-Observer-Models Folder runs a 2-AFC study and estimate the performance from an Sparse Difference-of-Gaussians (SDOG) observer: 
 
 In a Two alternative forced choice (2AFC) experiment, one attempts to detect a signal in one of two images presented to you. The 2AFC experiment estimates the perfect correct in detecting the signal.  The Sparse Difference-of-Gaussians (SDOG) model observer uses channels inspired by the visual system to estimate human performance in the detection task.  There are four MATLAB function or script files in the folder and one sample set of 2AFC images.
@@ -25,4 +27,20 @@ To run the 2-AFC obsercer study, simply run "run2AFCExperiment.m" in a folder wi
 
 Once you run the script and enter the necessary information as explained above, a figure window will appear with 3 images, one containing the signal, one not containing the signal, and one of the isolated signal itself. Your job is to click on the image (left or right) that you believe the signal is in. After each click, whether you got it correct or incorrect will appear in the command window. After you have completed all nImages trials, your percentage selected correctly will appear as the output.  The output will be saved as separate files called ‘userName_trialType_trialNumber’ for future reference and analysis.
 
-The code in the 2-AFC-and-Observer-Models Folder runs a 2-AFC study and estimate the performance from an Sparse Difference-of-Gaussians (SDOG) observer: 
+# Generating the Images for the 2AFC Study
+
+The code in the Generating-2AFC-MRI-Images generates the 2-AFC images.
+
+The code add a signal to the raw k-space data and uses the BART reconstruction toolbox for constrained reconstruction:
+https://github.com/mrirecon/bart
+
+There are three MATLAB scripts and functions:
+
+runMRIRecon.m:
+This script file is the only file you will actually run in Matlab. The script has several parameters that need to be set (e.g. regularization parameters, level of undersampling, etc.) and returns the image file used in the observer modeling.  The current parameters generate the "Sample2AFCIImages.mat".
+
+createLPF.m:
+This function creates a Gaussian Low Pass Filter.
+
+generateSignal.m:
+This function creates the signal which is being detected in the study.
