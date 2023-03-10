@@ -1,6 +1,6 @@
 # 2AFC-Studies-and-Observer-Modeling-in-MRI
 
-This repository contains code used in a submission to the SPIE Journal of Medical Imaging:
+This repository contains code used in a paper published in the SPIE Journal of Medical Imaging:
 
 AG O'Neill, EL Valdez, SG Lingala, and AR Pineda, "Modeling human observer detection in undersampled magnetic resonance imaging (MRI) with total variation and wavelet sparsity regularization", Journal of Medical Imaging, 10(1) 015502 (25 February 2023).
 
